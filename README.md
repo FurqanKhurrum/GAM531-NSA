@@ -147,8 +147,9 @@ dotnet build
 ```
 
 ## 👤 Author
-[Your Name]  
-GAM531 - Game Engine Development  
-October 2025
-
+**Student Name:** Furqan Khurrum 
+**Student ID:** 151694239
+**Class:** GAM531 - NSA - Fall 25
+**Professor:** Leonardo Moura
+**Date:** 10/01/2025
 ---
