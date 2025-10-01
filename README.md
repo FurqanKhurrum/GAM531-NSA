@@ -21,33 +21,18 @@ A 3D texture mapping demonstration using OpenGL through the OpenTK library in C#
 
 ### Step 1: Clone the Repository
 ```bash
-# Clone the repository
-git clone https://github.com/[your-username]/GAM531-TextureMapping.git
+git clone https://github.com/FurqanKhurrum/GAM531.git
 
-# Navigate to the project directory
-cd GAM531-TextureMapping
-```
+# Navigate to the repository
+cd GAM531
 
-### Step 2: Restore Dependencies
-```bash
-# Restore NuGet packages
+# Restore dependencies
 dotnet restore
-```
 
-This will automatically install:
-- **OpenTK 4.9.4** - OpenGL bindings for C#
-- **StbImageSharp 2.30.15** - Image loading library
-
-### Step 3: Build the Project
-```bash
 # Build the project
 dotnet build
-```
 
-## 🚀 Running the Project
-
-### Option 1: Using dotnet CLI
-```bash
+# Run Assignment 4
 dotnet run
 ```
 
