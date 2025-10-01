@@ -147,9 +147,10 @@ dotnet build
 ```
 
 ## 👤 Author
-**Student Name:** Furqan Khurrum 
-**Student ID:** 151694239
-**Class:** GAM531 - NSA - Fall 25
-**Professor:** Leonardo Moura
+**Student Name:** Furqan Khurrum  
+**Student ID:** 151694239  
+**Class:** GAM531 - NSA - Fall 25  
+**Professor:** Leonardo Moura  
 **Date:** 10/01/2025
+
 ---
