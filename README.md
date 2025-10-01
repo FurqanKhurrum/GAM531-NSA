@@ -2,17 +2,7 @@
 
 A 3D texture mapping demonstration using OpenGL through the OpenTK library in C#. This project renders a rotating cube with texture mapping applied to all faces.
 
-## 📋 Table of Contents
-- [Features](#features)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Running the Project](#running-the-project)
-- [Controls](#controls)
-- [Project Structure](#project-structure)
-- [Code Overview](#code-overview)
-- [Dependencies](#dependencies)
-- [Troubleshooting](#troubleshooting)
-- [Assignment Requirements Met](#assignment-requirements-met)
+<img width="1354" height="674" alt="image" src="https://github.com/user-attachments/assets/d6eb8852-8603-42e6-aa0e-8b8bfe151022" />
 
 ## ✨ Features
 - 3D cube rendering with OpenGL
@@ -70,27 +60,8 @@ dotnet run
 2. Press `F5` (ensure C# extension is installed)
 
 ## 🎮 Controls
-| Key | Action |
-|-----|--------|
-| **SPACE** | Toggle animation on/off |
-| **ESCAPE** | Exit application |
-
-## 📁 Project Structure
-```
-GAM531/
-├── Program.cs           # Entry point of the application
-├── TexturedCube.cs      # Main window and rendering loop
-├── Cube.cs              # Cube geometry and vertex data
-├── Shader.cs            # Shader compilation and management
-├── Texture.cs           # Texture loading and management
-├── Camera.cs            # View and projection matrices
-├── GAM531.csproj        # Project configuration file
-├── README.md            # This file
-├── texture.jpg          # Texture image (user-provided)
-└── Shaders/
-    ├── vertex.glsl      # Vertex shader
-    └── fragment.glsl    # Fragment shader
-```
+| **SPACE** - Toggle animation on/off
+| **ESCAPE** - Exit application 
 
 ## 💻 Code Overview
 
@@ -135,39 +106,10 @@ Manages the 3D view:
 ### Shader Implementation
 
 #### **Vertex Shader**
-```glsl
-#version 330 core
-layout(location = 0) in vec3 aPosition;
-layout(location = 1) in vec2 aTexCoord;
-
-out vec2 texCoord;
-
-uniform mat4 model;
-uniform mat4 view;
-uniform mat4 projection;
-
-void main()
-{
-    texCoord = aTexCoord;
-    gl_Position = projection * view * model * vec4(aPosition, 1.0);
-}
-```
 - Transforms vertex positions from model space to screen space
 - Passes texture coordinates to fragment shader
 
 #### **Fragment Shader**
-```glsl
-#version 330 core
-in vec2 texCoord;
-out vec4 FragColor;
-
-uniform sampler2D texture0;
-
-void main()
-{
-    FragColor = texture(texture0, texCoord);
-}
-```
 - Samples the texture at interpolated coordinates
 - Outputs the final pixel color
 
@@ -189,21 +131,6 @@ dotnet add package OpenTK --version 4.9.4
 dotnet add package StbImageSharp --version 2.30.15
 ```
 
-## 🔍 Troubleshooting
-
-### "Shader/Texture file not found"
-**Solution:** Ensure the .csproj file contains:
-```xml
-<ItemGroup>
-  <None Update="Shaders\**\*.glsl">
-    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-  </None>
-  <None Update="texture.jpg">
-    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-  </None>
-</ItemGroup>
-```
-
 ### Black screen or no cube visible
 **Solution:** Check that:
 - OpenGL context is created successfully
@@ -218,31 +145,6 @@ dotnet clean
 dotnet restore
 dotnet build
 ```
-
-### Performance issues
-**Solution:** 
-- Ensure graphics drivers are up to date
-- Check that animation loop isn't running too fast (frame limiting is automatic)
-
-## ✅ Assignment Requirements Met
-
-| Requirement | Status | Implementation |
-|-------------|--------|----------------|
-| **Project Setup** | ✅ | Clean C# project with OpenTK |
-| **3D Geometry** | ✅ | Cube with vertices, indices, and texture coordinates |
-| **Texture Management** | ✅ | GL.GenTexture, GL.BindTexture, GL.TexImage2D implementation |
-| **Shaders** | ✅ | Vertex shader passes coords, fragment shader samples texture |
-| **Rendering** | ✅ | Proper texture mapping without distortion |
-| **Bonus: Animation** | ✅ | Continuous rotation with Matrix4.CreateRotationY/X |
-
-## 📸 Screenshots
-The application displays a textured cube rotating in 3D space. Press SPACE to pause rotation for screenshots.
-
-## 🎓 Academic Integrity
-This project was created for GAM531 Assignment 4. Please ensure you understand the code and follow your institution's academic integrity policies if using this as reference.
-
-## 📄 License
-This project is created for educational purposes as part of GAM531 coursework.
 
 ## 👤 Author
 [Your Name]  
