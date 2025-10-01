@@ -1,6 +1,6 @@
 ﻿using OpenTK.Mathematics;
 
-namespace TextureMapping
+namespace GAM531.Assignment_4
 {
     public class Camera
     {
@@ -39,12 +39,12 @@ namespace TextureMapping
         public Camera(Vector3 position, float aspectRatio)
         {
             this.position = position;
-            this.target = Vector3.Zero;
-            this.up = Vector3.UnitY;
+            target = Vector3.Zero;
+            up = Vector3.UnitY;
             this.aspectRatio = aspectRatio;
-            this.fov = MathHelper.DegreesToRadians(45.0f);
-            this.nearPlane = 0.1f;
-            this.farPlane = 100.0f;
+            fov = MathHelper.DegreesToRadians(45.0f);
+            nearPlane = 0.1f;
+            farPlane = 100.0f;
         }
 
         public Matrix4 GetViewMatrix()

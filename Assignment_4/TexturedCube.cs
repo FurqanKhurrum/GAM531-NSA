@@ -4,9 +4,8 @@ using OpenTK.Windowing.Common;
 using OpenTK.Windowing.Desktop;
 using OpenTK.Windowing.GraphicsLibraryFramework;
 using System;
-using TextureMapping;
 
-namespace GAM531
+namespace GAM531.Assignment_4
 {
     public class TexturedCube : GameWindow
     {
@@ -40,7 +39,7 @@ namespace GAM531
 
             foreach (var file in textureFiles)
             {
-                if (System.IO.File.Exists(file))
+                if (File.Exists(file))
                 {
                     textureToLoad = file;
                     Console.WriteLine($"Found texture file: {file}");

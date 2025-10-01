@@ -3,7 +3,7 @@ using System.IO;
 using OpenTK.Graphics.OpenGL4;
 using OpenTK.Mathematics;
 
-namespace GAM531
+namespace GAM531.Assignment_4
 {
     public class Shader : IDisposable
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using OpenTK.Graphics.OpenGL4;
 
-namespace GAM531
+namespace GAM531.Assignment_4
 {
     public class Cube : IDisposable
     {

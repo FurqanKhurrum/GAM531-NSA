@@ -2,7 +2,7 @@
 using OpenTK.Windowing.Common;
 using OpenTK.Windowing.Desktop;
 
-namespace GAM531
+namespace GAM531.Assignment_4
 {
     class Program
     {

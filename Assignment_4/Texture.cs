@@ -3,7 +3,7 @@ using System.IO;
 using OpenTK.Graphics.OpenGL4;
 using StbImageSharp;
 
-namespace GAM531
+namespace GAM531.Assignment_4
 {
     public class Texture : IDisposable
     {
@@ -74,7 +74,7 @@ namespace GAM531
                 for (int x = 0; x < width; x++)
                 {
                     int index = (y * width + x) * 4;
-                    bool isWhite = ((x / checkSize) + (y / checkSize)) % 2 == 0;
+                    bool isWhite = (x / checkSize + y / checkSize) % 2 == 0;
 
                     if (isWhite)
                     {
