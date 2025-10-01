@@ -4,7 +4,6 @@
 		<TargetFramework>net8.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
-		<!-- Disable default compile items since we're specifying them manually -->
 		<EnableDefaultCompileItems>false</EnableDefaultCompileItems>
 	</PropertyGroup>
 
@@ -14,25 +13,16 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<!-- Explicitly include only Assignment_4 C# files -->
-		<Compile Include="Assignment_4\*.cs" />
-	</ItemGroup>
+		<Compile Include="Assignment_4\**\*.cs" />
 
-	<ItemGroup>
-		<!-- Copy shader files to output directory maintaining structure -->
-		<None Update="Assignment_4\Shaders\*.glsl">
+		<Content Include="Assignment_4\Shaders\*.glsl">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 			<Link>Shaders\%(Filename)%(Extension)</Link>
-		</None>
+		</Content>
 
-		<!-- Copy texture files to output directory -->
-		<None Update="Assignment_4\*.jpg">
+		<Content Include="Assignment_4\*.jpg;Assignment_4\*.png">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 			<Link>%(Filename)%(Extension)</Link>
-		</None>
-		<None Update="Assignment_4\*.png">
-			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-			<Link>%(Filename)%(Extension)</Link>
-		</None>
+		</Content>
 	</ItemGroup>
 </Project>
