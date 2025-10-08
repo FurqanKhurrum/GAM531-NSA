@@ -4,25 +4,17 @@
 		<TargetFramework>net8.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
-		<EnableDefaultCompileItems>false</EnableDefaultCompileItems>
 	</PropertyGroup>
-
 	<ItemGroup>
 		<PackageReference Include="OpenTK" Version="4.9.4" />
 		<PackageReference Include="StbImageSharp" Version="2.30.15" />
 	</ItemGroup>
-
 	<ItemGroup>
-		<Compile Include="Assignment_4\**\*.cs" />
-
-		<Content Include="Assignment_4\Shaders\*.glsl">
+		<None Update="phong.vert">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-			<Link>Shaders\%(Filename)%(Extension)</Link>
-		</Content>
-
-		<Content Include="Assignment_4\*.jpg;Assignment_4\*.png">
+		</None>
+		<None Update="phong.frag">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-			<Link>%(Filename)%(Extension)</Link>
-		</Content>
+		</None>
 	</ItemGroup>
 </Project>
