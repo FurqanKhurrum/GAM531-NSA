@@ -2,7 +2,9 @@
 
 A 3D lighting demonstration implementing the Phong lighting model using OpenGL through the OpenTK library in C#. This project renders an interactive cube with realistic ambient, diffuse, and specular lighting effects.
 
-## ✨ Features
+![20251008-0502-08 2087519](https://github.com/user-attachments/assets/d208e38f-b388-4c5f-82bf-0152a94f05a8)
+
+## Features
 - Complete Phong lighting implementation (ambient, diffuse, specular)
 - Interactive 3D cube with proper per-face normals
 - Dynamic point light source with real-time position control
@@ -11,13 +13,13 @@ A 3D lighting demonstration implementing the Phong lighting model using OpenGL t
 - Proper normal transformation for accurate lighting
 - Depth testing for correct 3D rendering
 
-## 🔧 Prerequisites
+## Prerequisites
 - [.NET 8.0 SDK](https://dotnet.microsoft.com/download/dotnet/8.0) or later
 - A text editor or IDE (Visual Studio, VS Code, or Rider recommended)
 - Graphics card supporting OpenGL 3.3 or later
 - Git (for cloning the repository)
 
-## 📦 Installation
+## Installation
 
 ### Step 1: Clone the Repository
 ```bash
@@ -44,7 +46,7 @@ dotnet run
 1. Open the folder in VS Code
 2. Press `F5` (ensure C# extension is installed)
 
-## 🎮 Controls
+## Controls
 
 ### Camera Movement
 | Key | Action |
@@ -71,7 +73,7 @@ dotnet run
 | **R** | Toggle auto-rotation of cube |
 | **ESC** | Exit application |
 
-## 💻 Code Overview
+## Code Overview
 
 ### Core Components
 
@@ -148,7 +150,7 @@ where V is the view direction, R is the reflection direction, and shininess cont
 finalColor = (ambient + diffuse + specular) × objectColor
 ```
 
-## 📚 Dependencies
+## Dependencies
 
 ### NuGet Packages
 | Package | Version | Purpose |
@@ -162,7 +164,7 @@ If dependencies don't restore automatically:
 dotnet add package OpenTK --version 4.9.4
 ```
 
-## 👤 Author
+## Author
 **Student Name:** Furqan Khurrum  
 **Student ID:** 151694239  
 **Class:** GAM531 - NSA - Fall 2025  
@@ -171,7 +173,7 @@ dotnet add package OpenTK --version 4.9.4
 
 ---
 
-## 📝 Implementation Report
+## Implementation Report
 
 ### Overview
 This project successfully implements the Phong lighting model using OpenTK and GLSL shaders in C#. The implementation features a 3D cube with proper per-face normals, allowing each face to be correctly lit based on its orientation relative to the light source. The vertex shader handles transformation of vertex positions and normals to world space, while the fragment shader performs per-pixel lighting calculations combining ambient, diffuse, and specular components for realistic rendering.
